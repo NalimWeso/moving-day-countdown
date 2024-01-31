@@ -1,5 +1,12 @@
 body {
     color: white;
-    background-color: rgba(0, 0, 0, 0.753);
+    background-color: #000000c0;
     font-size: 40px;
+    text-align: center;
+}
+
+h1 {
+    background-color: rgba(0, 0, 0, 0.353);
+    margin: 0;
+    padding: 0;
 }
