@@ -30,5 +30,5 @@ document.querySelector('.content').innerHTML = `
         home. This ${changeFour} a new chapter in my life, and since I enjoy changes and challenges, I ${changeFive} date.
     </p>
     <hr>
-${messageContent}.
+<p class="message-content">${messageContent}</p>
 `;
