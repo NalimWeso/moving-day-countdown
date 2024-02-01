@@ -1,29 +1,30 @@
-dayjs.extend(dayjs_plugin_relativeTime);
+try {
+    dayjs.extend(dayjs_plugin_relativeTime);
 
-const currentDate = dayjs();
-const movingDay = dayjs('2024-09-01');
+    const currentDate = dayjs();
+    const movingDay = dayjs('2024-09-01');
 
-if (currentDate.isBefore(movingDay)) {
-    changeOne = 'will occur';
-    changeTwo = 'will be';
-    changeThree = 'move';
-    changeFour = 'will open';
-    changeFive = 'am eagerly anticipating this';
+    if (currentDate.isBefore(movingDay)) {
+        changeOne = 'will occur';
+        changeTwo = 'will be';
+        changeThree = 'move';
+        changeFour = 'will open';
+        changeFive = 'am eagerly anticipating this';
 
-    dayNumber = movingDay.diff(currentDate, 'day');
-    messageContent = `Days left: ${dayNumber}`;
-} else {
-    changeOne = 'occurred';
-    changeTwo = 'was';
-    changeThree = 'moved';
-    changeFour = 'opened';
-    changeFive = 'eagerly anticipated that';
+        dayNumber = movingDay.diff(currentDate, 'day');
+        messageContent = `Days left: ${dayNumber}`;
+    } else {
+        changeOne = 'occurred';
+        changeTwo = 'was';
+        changeThree = 'moved';
+        changeFour = 'opened';
+        changeFive = 'eagerly anticipated that';
 
-    dayNumber = currentDate.diff(movingDay, 'day');
-    messageContent = `Days after it was done: ${dayNumber}`;
-}
+        dayNumber = currentDate.diff(movingDay, 'day');
+        messageContent = `Days after it was done: ${dayNumber}`;
+    }
 
-document.querySelector('.content').innerHTML = `
+    document.querySelector('.content').innerHTML = `
 <h1>Moving Day Counter</h1>
     <p>
         On September 1, 2024, a significant moment ${changeOne} in my life. It ${changeTwo} the day I ${changeThree} out from my parents'
@@ -32,3 +33,6 @@ document.querySelector('.content').innerHTML = `
     <hr>
 <p class="message-content">${messageContent}</p>
 `;
+} catch (error) {
+    document.querySelector('.content').innerHTML = '<p>An error occurred. Please try again later.</p>';
+}
