@@ -1,5 +1,5 @@
 body {
-    color: #E7EAF6;
+    color: #EBEEF7;
     background-color: #231901DA;
     font-size: 3vw;
     font-family: 'Poppins', sans-serif;
@@ -18,7 +18,7 @@ p {
 }
 
 hr {
-    border: .2vw solid#231901DA;
+    border: .2vw solid #231901DA;
 }
 
 .message-content {
