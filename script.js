@@ -21,18 +21,17 @@ try {
         changeFive = 'eagerly anticipated that';
 
         dayNumber = currentDate.diff(movingDay, 'day');
-        messageContent = `Days after it was done: ${dayNumber}`;
+        messageContent = `Days after: ${dayNumber}`;
     }
 
     document.querySelector('.content').innerHTML = `
-<h1>Moving Day Counter</h1>
+    <h1>Moving Day Counter</h1>
     <p>
-        On September 1, 2024, a significant moment ${changeOne} in my life. It ${changeTwo} the day I ${changeThree} out from my parents'
-        home. This ${changeFour} a new chapter in my life, and since I enjoy changes and challenges, I ${changeFive} date.
+        On September 1, 2024, a significant moment ${changeOne} in my life. It ${changeTwo} the day I ${changeThree} out from my parents' home. This ${changeFour} a new chapter in my life, and since I enjoy changes and challenges, I ${changeFive} date.
     </p>
     <hr>
-<p class="message-content">${messageContent}</p>
-`;
+    <p class="message-content">${messageContent}</p>
+    `;
 } catch (error) {
-    document.querySelector('.content').innerHTML = '<p>An error occurred. Please try again later.</p>';
+    document.querySelector('body').innerHTML = '<p style="color: red; margin: 0; padding: 0;">An error occurred. Please try again.</p>';
 }
